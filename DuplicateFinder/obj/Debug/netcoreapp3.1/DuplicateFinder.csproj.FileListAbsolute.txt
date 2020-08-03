@@ -11,3 +11,16 @@ C:\Users\brbry_000\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcor
 C:\Users\brbry_000\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.dll
 C:\Users\brbry_000\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.pdb
 C:\Users\brbry_000\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.genruntimeconfig.cache
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\netcoreapp3.1\DuplicateFinder.exe
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\netcoreapp3.1\DuplicateFinder.deps.json
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\netcoreapp3.1\DuplicateFinder.runtimeconfig.json
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\netcoreapp3.1\DuplicateFinder.runtimeconfig.dev.json
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\netcoreapp3.1\DuplicateFinder.dll
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\bin\Debug\netcoreapp3.1\DuplicateFinder.pdb
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.csprojAssemblyReference.cache
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.AssemblyInfoInputs.cache
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.AssemblyInfo.cs
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.csproj.CoreCompileInputs.cache
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.dll
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.pdb
+C:\Users\Stbus\source\repos\DuplicateFinder\DuplicateFinder\obj\Debug\netcoreapp3.1\DuplicateFinder.genruntimeconfig.cache

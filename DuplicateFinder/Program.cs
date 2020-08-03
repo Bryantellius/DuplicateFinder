@@ -9,23 +9,31 @@ namespace DuplicateFinder
     {
         static void Main(string[] args)
         {
-            using var reader = new StreamReader(@"C:\Users\brbry_000\Downloads\test.csv");
-            {
-                List<string> Email = new List<string>();
-                List<string> Name = new List<string>();
-                List<string> Number = new List<string>();
+            string[] files = Directory.GetFiles(@"C:\Users\Stbus\Downloads\Pipedrive");
+
+            using var reader = new StreamReader(files[0]);
+            
+                List<Contact> Leads = new List<Contact>();
+       
+                string[] values = { };
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    var values = line.Split(',');
+                    values = line.Split(',');
 
-                    Email.Add(values[0]);
-                    Name.Add(values[1]);
-                    Number.Add(values[2]);
+                    Leads.Add(new Contact(values[1], values[0], values[2]));
                 }
 
-                HashSet<string> hashset = new HashSet<string>();
-                IEnumerable<string> duplicates = Email.Where(e => !hashset.Add(e));
+                Leads.Add(Leads[1]);
+
+                for(int item = 0; item < Leads.Count; item++)
+                {
+                    Console.WriteLine($"{Leads[item].Name}\t{Leads[item].Email}\t{Leads[item].Number}");
+                }
+
+                //Leads duplicates
+                HashSet<Contact> hashset = new HashSet<Contact>();
+                IEnumerable<Contact> duplicates = Leads.Where(e => !hashset.Add(e));
 
                 //Displays Selected Persons
                 if(!duplicates.Any())
@@ -35,7 +43,7 @@ namespace DuplicateFinder
                 {
                 Console.WriteLine(String.Join("/n", duplicates));
                 }
-            }
+            
         }
     }
 }
