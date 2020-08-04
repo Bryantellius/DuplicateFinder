@@ -9,7 +9,7 @@ namespace DuplicateFinder
     {
         static void Main(string[] args)
         {
-            string[] files = Directory.GetFiles(@"C:\Users\Stbus\Downloads\Pipedrive");
+            string[] files = Directory.GetFiles(@"C:\Users\brbry_000\Downloads\Pipedrive");
 
             using var reader = new StreamReader(files[0]);
             
@@ -23,17 +23,19 @@ namespace DuplicateFinder
 
                     Leads.Add(new Contact(values[1], values[0], values[2]));
                 }
+                     
 
-                Leads.Add(Leads[1]);
+                foreach(var person in Leads)
+            {
+                Console.WriteLine($"{person.Name} {person.Email} {person.Number}");
+            }
 
-                for(int item = 0; item < Leads.Count; item++)
-                {
-                    Console.WriteLine($"{Leads[item].Name}\t{Leads[item].Email}\t{Leads[item].Number}");
-                }
+            Console.WriteLine("");
 
                 //Leads duplicates
-                HashSet<Contact> hashset = new HashSet<Contact>();
-                IEnumerable<Contact> duplicates = Leads.Where(e => !hashset.Add(e));
+                IEnumerable<Contact> duplicates = Leads.GroupBy(i => i)
+                .Where(g => g.Count() > 1)
+                .Select(g => g.Key);
 
                 //Displays Selected Persons
                 if(!duplicates.Any())
@@ -41,7 +43,11 @@ namespace DuplicateFinder
                     Console.WriteLine("No Duplicates Found");
                 } else
                 {
-                Console.WriteLine(String.Join("/n", duplicates));
+                Console.WriteLine("Duplicates:");
+                foreach(var item in duplicates)
+                {
+                    Console.WriteLine($"{item.Name} {item.Email} {item.Number}");
+                }
                 }
             
         }

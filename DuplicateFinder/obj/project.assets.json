@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Stbus\\.nuget\\packages\\": {}
+    "C:\\Users\\brbry_000\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stbus\\source\\repos\\DuplicateFinder\\DuplicateFinder\\DuplicateFinder.csproj",
+      "projectUniqueName": "C:\\Users\\brbry_000\\source\\repos\\DuplicateFinder\\DuplicateFinder\\DuplicateFinder.csproj",
       "projectName": "DuplicateFinder",
-      "projectPath": "C:\\Users\\Stbus\\source\\repos\\DuplicateFinder\\DuplicateFinder\\DuplicateFinder.csproj",
-      "packagesPath": "C:\\Users\\Stbus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stbus\\source\\repos\\DuplicateFinder\\DuplicateFinder\\obj\\",
+      "projectPath": "C:\\Users\\brbry_000\\source\\repos\\DuplicateFinder\\DuplicateFinder\\DuplicateFinder.csproj",
+      "packagesPath": "C:\\Users\\brbry_000\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\brbry_000\\source\\repos\\DuplicateFinder\\DuplicateFinder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Stbus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\brbry_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
