@@ -23,11 +23,12 @@ namespace DuplicateFinder
 
                     Leads.Add(new Contact(values[1], values[0], values[2]));
                 }
-
+                     
                 //Leads duplicates
                 Leads.getAllRepeated(z => new { z.Name, z.Email, z.Number })
                 .ToList()
                 .ForEach(z => Console.WriteLine("{0} \t {1} \t {2}", z.Name, z.Email, z.Number));
+            Console.WriteLine("Done");
         }
     }
 
