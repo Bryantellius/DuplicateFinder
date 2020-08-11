@@ -11,23 +11,23 @@ namespace DuplicateFinder
         {
             string[] files = Directory.GetFiles(@"C:\Users\Stbus\Downloads\Pipedrive");
 
-            using var reader = new StreamReader(files[files.Length-1]);
-            
-                List<Contact> Leads = new List<Contact>();
-       
-                string[] values = { };
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    values = line.Split(',');
+            using var reader = new StreamReader(files[files.Length - 1]);
 
-                    Leads.Add(new Contact(values[1], values[0], values[2]));
-                }
-                     
-                //Leads duplicates
-                Leads.getAllRepeated(z => new { z.Name, z.Email, z.Number })
-                .ToList()
-                .ForEach(z => Console.WriteLine("{0} \t {1} \t {2}", z.Name, z.Email, z.Number));
+            List<Contact> Leads = new List<Contact>();
+
+            string[] values = { };
+            while (!reader.EndOfStream)
+            {
+                var line = reader.ReadLine();
+                values = line.Split(',');
+
+                Leads.Add(new Contact(values[1], values[0], values[2]));
+            }
+
+            //Leads duplicates
+            Leads.getAllRepeated(z => new { z.Name, z.Email, z.Number })
+            .ToList()
+            .ForEach(z => Console.WriteLine("{0} \t {1} \t {2}", z.Name, z.Email, z.Number));
             Console.WriteLine("Done");
         }
     }
