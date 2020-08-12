@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
-
-namespace DuplicateFinder
+﻿namespace DuplicateFinder
 {
     class Contact
     {
@@ -13,9 +8,9 @@ namespace DuplicateFinder
 
         public Contact(string name, string email, string num)
         {
-            this.Name = name;
-            this.Email = email;
-            this.Number = num;
+            Name = name;
+            Email = email;
+            Number = num;
         }
     }
 }
