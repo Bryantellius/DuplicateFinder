@@ -11,9 +11,10 @@ namespace DuplicateFinder
         {
             string[] files = Directory.GetFiles(@"C:\Users\Stbus\Downloads\Pipedrive");
 
-            using var reader = new StreamReader(files[files.Length - 1]);
+            using var reader = new StreamReader(files[^1]);
 
             List<Contact> Leads = new List<Contact>();
+            List<Contact> IncompleteLeads = new List<Contact>();
 
             string[] values = { };
             while (!reader.EndOfStream)
@@ -22,25 +23,43 @@ namespace DuplicateFinder
                 values = line.Split(',');
 
                 Leads.Add(new Contact(values[1], values[0], values[2]));
+
             }
 
+            Console.WriteLine($"{Leads.Count - 1} contacts\n");
+
             //Leads duplicates
-            Leads.getAllRepeated(z => new { z.Name, z.Email, z.Number })
-            .ToList()
-            .ForEach(z => Console.WriteLine("{0} \t {1} \t {2}", z.Name, z.Email, z.Number));
-            Console.WriteLine("Done");
+            List<Contact> DuplicateLeads = Leads.GetAllRepeated(c => new { c.Name, c.Email })
+            .ToList();
+
+
+            if (DuplicateLeads.Count > 0)
+            {
+                DuplicateLeads.ForEach(c => Console.WriteLine($"{c.Name} \t {c.Email} \t {c.Number}"));
+
+                System.Console.WriteLine($"\n{DuplicateLeads.Count()} duplicates");
+            }
+            else
+            {
+                Console.WriteLine("0 duplicates found");
+            }
+
+
+
+            Console.WriteLine("\nDone");
         }
     }
 
-    public static class Extention
+    public static class Extension
     {
-        public static IEnumerable<Contact> getAllRepeated<Contact>(this IEnumerable<Contact> extList, Func<Contact, object> groupProps) where Contact : class
+        public static IEnumerable<Contact> GetAllRepeated<Contact>(this IEnumerable<Contact> extList, Func<Contact, object> groupProps)
         {
             //Get all duplicate contacts
-            return extList
+            extList = extList
                 .GroupBy(groupProps)
-                .Where(z => z.Count() > 1) //Filter only the distinct one
-                .SelectMany(z => z); //All in where has to be returned
+                .Where(c => c.Count() > 1) //Filter only the distinct one
+                .SelectMany(c => c); //All in where has to be returned
+            return extList;
         }
     }
 }
