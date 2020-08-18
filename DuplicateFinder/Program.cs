@@ -23,7 +23,6 @@ namespace DuplicateFinder
                 values = line.Split(',');
 
                 Leads.Add(new Contact(values[1], values[0], values[2]));
-
             }
 
             Console.WriteLine($"{Leads.Count - 1} contacts\n");
@@ -58,7 +57,7 @@ namespace DuplicateFinder
             extList = extList
                 .GroupBy(groupProps)
                 .Where(c => c.Count() > 1) //Filter only the distinct one
-                .SelectMany(c => c); //All in where has to be returned
+                .SelectMany(c => c); //One of each sequence returned
             return extList;
         }
     }
